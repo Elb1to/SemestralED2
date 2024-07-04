@@ -14,7 +14,6 @@ import me.elb1to.utp.sorting.type.impl.ShellSort;
 import javax.swing.*;
 import java.io.File;
 import java.io.IOException;
-import java.lang.reflect.Method;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -90,7 +89,7 @@ public class GuiListener {
 
 	private void writeToFile(String content) {
 		try {
-			Path path = Paths.get(GuiListener.SORTED_ARRAY_FILE);
+			Path path = Paths.get("src/main/resources/" + GuiListener.SORTED_ARRAY_FILE);
 			Files.writeString(path, content, StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
 		} catch (IOException e) {
 			e.printStackTrace();
